@@ -61,7 +61,7 @@ max_horses <- horse_pop %>%
 knitr::kable(max_horses, caption = "Table 1. Horse Populations By Province")
 ```
 
-Below we zoom in and look at the province of Alberta:
+Below we zoom in and look at the province of `r params$province`:
 
 ```{r plot province, fig.width=5, fig.height=4, fig.cap = "Fig 2: Historical horses in Alberta", out.width = '40%', out.height = '40%'}
 province_plot <- horse_pop %>% 
@@ -77,3 +77,4 @@ province_plot <- horse_pop %>%
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 province_plot
 ```
+Figure 2. Horse populations for `r params$province` between 1940 - 1972.
