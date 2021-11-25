@@ -33,7 +33,7 @@ The R programming language and the following R packages were used to perform the
 
 ## Results
 
-```{r plot horses, fig.width=10, fig.height=3}
+```{r plot horses, fig.width=10, fig.height=3, fig.cap = "Fig 1: Historical horses by province", out.width = '40%', out.height = '40%'}
 horse_plot <- ggplot(horse_pop, aes(x = Ref_Date, y = Value)) +
   geom_point() +
   geom_line() +
@@ -63,7 +63,7 @@ knitr::kable(max_horses, caption = "Table 1. Horse Populations By Province")
 
 Below we zoom in and look at the province of Alberta:
 
-```{r plot province, fig.width=5, fig.height=4}
+```{r plot province, fig.width=5, fig.height=4, fig.cap = "Fig 2: Historical horses in Alberta", out.width = '40%', out.height = '40%'}
 province_plot <- horse_pop %>% 
   filter(GEO == "Alberta") %>% 
   ggplot(aes(x = Ref_Date, y = Value)) +
